@@ -5,6 +5,7 @@ logger = logging.getLogger('PDFinfo')
 debug, info, warning, error, panic = logger.debug, logger.info, logger.warning, logger.error, logger.critical
 
 from collections import OrderedDict
+import os, os.path
 import re
 import string
 import subprocess
@@ -59,7 +60,7 @@ class PDFinfo:
 	def getTitle(self, default=''):
 		t = default
 		if not t:
-			_, basename = os.path.split(p.filename)
+			_, basename = os.path.split(self.filename)
 			t, _ = os.path.splitext(basename)
 			t = string.capwords(t.replace('_', ' '))
 		d = self.as_dict()

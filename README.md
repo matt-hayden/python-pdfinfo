@@ -6,5 +6,5 @@ Wrapper for pdfinfo utility
 In your project (or home) directory:
 
 ```
-pip3 install --user -e git+ssh://git@github.com/matt-hayden/python-pdfinfo#egg=pdfinfo
+pip3 install --user -e git+ssh://git@github.com/matt-hayden/python-pdfinfo#egg=python-pdfinfo
 ```
